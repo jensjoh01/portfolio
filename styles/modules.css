@@ -1,0 +1,42 @@
+body {
+  max-width: 90%;
+}
+
+.main-nav ul li {
+  display: none;
+}
+
+.hamburger {
+  font-size: 2em;
+  position: relative;
+  left: 95%;
+}
+
+.main-nav:hover ul li {
+  display: contents;
+  display: block;
+  width: 100%;
+  z-index: 2;
+  background: white;
+  text-align: center;
+}
+
+img {
+  max-width: 90%;
+}
+
+@media only screen and (min-width: 640px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  header ul {
+    display: inline-block;
+  }
+
+  header ul li {
+    display: inline;
+  }
+
+}
