@@ -1,5 +1,39 @@
-body {
+* {outline: dashed 1px orange}
+
+p {
   max-width: 90%;
+}
+
+img {
+  max-width: 90%;
+}
+
+header h1 {
+  position: absolute;
+  display: inline-block;
+  float: left;
+  z-index: 2;
+  color: #ccc;
+  font-size: 1.5em;
+  top: 2.5%;
+  left: 5%;
+}
+
+#hero-image {
+  max-width: 100%;
+  position: relative;
+  top: 0%;
+  display: block;
+  top: 0%;
+}
+
+.main-nav {
+  position: absolute;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 10%;
+  background-color: #000;
 }
 
 .main-nav ul li {
@@ -8,35 +42,57 @@ body {
 
 .hamburger {
   font-size: 2em;
-  position: relative;
-  left: 95%;
+  position: absolute;
+  right: 2%;
+  z-index: 1;
+  color: #ccc;
+}
+
+.main-nav ul {
+  position: absolute;
+  top: 150%;
+  width: 100%;
 }
 
 .main-nav:hover ul li {
+  position: relative;
+
   display: contents;
   display: block;
-  width: 100%;
-  z-index: 2;
+  height: 2.5em;
+  z-index: 1;
   background: white;
   text-align: center;
+  font-size: 1.25em;
+  opacity: .7;
 }
 
-img {
-  max-width: 90%;
+.main-nav a {
+  position: relative;
+  top: 35%;
 }
 
-@media only screen and (min-width: 640px) {
+
+@media only screen and (min-width: 640px){
+
+
+  /* currently have to set hover to be the same as without hover...*/
+  .main-nav:hover ul li {
+    display: inline;
+  }
+
+  .main-nav ul li {
+    display: inline;
+
+  }
 
   .hamburger {
     display: none;
   }
 
-  header ul {
+  .main-nav ul {
     display: inline-block;
   }
 
-  header ul li {
-    display: inline;
-  }
 
 }
