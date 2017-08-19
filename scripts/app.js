@@ -33,3 +33,22 @@ $(function() {
 
   imageSlider();
 });
+
+
+/*_________________This is a function to try and change the slide functionality_____*/
+// $(function() {
+//   var interval;
+//   var count = 1;
+//   function imageSlider() {
+//   interval = setInterval(function() {
+//     $('#image' + count).animate({'margin-left': '-' + 1020}, 1000, function() {
+//       count++;
+//       if (count === ) {
+//         count = 0;
+//         $('.hero-image img').css('margin-left', 0);
+//       }
+//     })
+//   },1000);
+//   }
+//   imageSlider();
+// });
