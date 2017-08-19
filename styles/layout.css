@@ -1,10 +1,8 @@
 /*stylesheet for classes, ids, header and footer*/
-* {outline: dashed 1px orange}
+/** {outline: dashed 1px orange}*/
 
 header {
-  background-color: blue;
-  height: 200px;
-}
-header > {
-  display: inline;
+  background-color: #444;
+  height: 60px;
+  color: #bbb;
 }

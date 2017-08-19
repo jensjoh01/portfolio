@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/reset.css">
-    <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <title>John Jensen</title>
   </head>
   <body>
@@ -14,27 +14,48 @@
     <header>
       <h1>John Jensen</h1>
         <nav class="main-nav">
-          <span class="hamburger">&#9776;</span>
+          <span id="hamburger">&#9776;</span>
             <ul>
-              <li><a href='#'>About Me</a></li>
-              <li><a href='#'>Interests</a></li>
-              <li><a href='#'>Experience</a></li>
-              <li><a href='#'>Projects</a></li>
-              <li><a href='#'>Contact Me</a></li>
+              <li><a href='#' data-tab="about">About</a></li>
+              <li><a href='#' data-tab="experience">Experience</a></li>
+              <li><a href='#'data-tab="projects">Projects</a></li>
+              <li><a href='#' data-tab="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="img-container">
       <ul class="hero-images">
-        <li class="hero-image"><img src="http://placehold.it/720x400/FFA500"></li>
-        <li class="hero-image"><img src="http://placehold.it/720x400/777"></li>
-        <li class="hero-image"><img src="http://placehold.it/720x400/800000"></li>
-        <li class="hero-image"><img src="http://placehold.it/720x400/FFA500"></li>
+        <li class="hero-image"><img src="http://placehold.it/1020x550/FFA"></li>
+        <li class="hero-image"><img src="http://placehold.it/1020x550/777"></li>
+        <li class="hero-image"><img src="http://placehold.it/1020x550/800000"></li>
+        <li class="hero-image"><img src="http://placehold.it/1020x550/FFA"></li>
       </ul>
     </div>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <main>
+      <section id="about">
+        <h1>About Me</h1>
+        <p>This is the about me section</p>
+      </section>
+
+      <section id="experience">
+        <h1>Experience</h1>
+        <p>This is the experience section</p>
+      </section>
+
+      <section id="projects">
+        <h1>Projects</h1>
+        <p>This is the projects section</p>
+      </section>
+
+      <section id="contact">
+        <h1>Contact Me</h1>
+        <p>This is the contacts section</p>
+      </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../scripts/app.js"></script>
   </body>
 </html>

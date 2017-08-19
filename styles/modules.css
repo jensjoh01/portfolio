@@ -1,1 +1,38 @@
 /* Modules CSS stylesheet navigation, headings, ul, smaller components*/
+
+
+@media only screen and (min-width: 640px) {
+  #hamburger {
+    display: none;
+  }
+
+  header h1 {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+
+  header nav {
+    display: inline-block;
+    float: right;
+  }
+
+  header nav ul {
+    max-width: 550px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    margin-right: 3em;
+    font-size: 1.1em;
+  }
+
+  header nav ul li a {
+    color: #bbb;
+    text-decoration: none;
+  }
+}
