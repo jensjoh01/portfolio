@@ -34,6 +34,14 @@ $(function() {
   imageSlider();
 });
 
+/*______Function to toggle hamburger button______*/
+
+$(function() {
+  $('#hamburger').on('click', function() {
+    $('header nav').slideToggle();
+  });
+});
+
 
 /*_________________This is a function to try and change the slide functionality_____*/
 // $(function() {
