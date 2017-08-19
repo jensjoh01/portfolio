@@ -1,7 +1,45 @@
 /* Modules CSS stylesheet navigation, headings, ul, smaller components*/
 
+header h1 {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 20px;
+  font-size: 1.5em;
+}
+
+header nav ul li {
+  position: relative;
+  text-align: center;
+  height: 80px;
+  background-color: #222;
+  border-bottom: 1px solid white;
+  z-index: 1;
+}
+
+header nav li a {
+  line-height: 80px;
+  color: #bbb;
+  font-size: 1.5em;
+  text-decoration: none;
+  z-index: 1;
+}
+
+#hamburger {
+  display: inline-block;
+  float: right;
+  height: 60px;
+  width: 1.4em;
+  line-height: 60px;
+  font-size: 2em;
+}
+
+header nav {
+  display: none;
+}
 
 @media only screen and (min-width: 640px) {
+
   #hamburger {
     display: none;
   }
@@ -19,20 +57,23 @@
     float: right;
   }
 
-  header nav ul {
-    max-width: 550px;
-    height: 60px;
-    line-height: 60px;
-  }
-
   header nav ul li {
     display: inline-block;
     margin-right: 3em;
-    font-size: 1.1em;
+    height: 60px;
+    line-height: 60px;
+    background-color: #444;
+  }
+
+  header nav ul {
+    max-width: 550px;
+
   }
 
   header nav ul li a {
     color: #bbb;
     text-decoration: none;
+    font-size: 1.1em;
+    line-height: 60px;
   }
 }
