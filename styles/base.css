@@ -1,0 +1,22 @@
+/*stylesheet for main elements html, body, article, nav, aside, p, a*/
+
+.img-container {
+  max-width: 1020px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.hero-images {
+  width: 6000px;
+}
+
+.hero-image {
+  float: left;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
