@@ -60,3 +60,29 @@ $(function() {
 //   }
 //   imageSlider();
 // });
+
+var handlebarsData = [
+  {
+    category: 'about',
+    title: 'About Me',
+    content: 'is my template working??? This is the about me section'
+  },
+  {
+    category: 'experience',
+    title: 'Experience',
+    content: 'This is the experience section'
+  },
+  {
+    category: 'projects',
+    title: 'Projects',
+    content: 'This is the projects section'
+  },
+  {
+    category: 'contact',
+    title: 'Contact Me',
+    content:'This is the contacts section'
+  }
+];
+
+var template = $('#template').html();
+var compileData = Handlebars.compile(template);
