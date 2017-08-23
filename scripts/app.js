@@ -5,6 +5,7 @@ $(function() {
   var count = 0;
   var width = 1020;
 
+  /*_______Function to hide and show tab content________*/
   $('main section').hide();
 
   $('header nav ul li a').on('click', function() {
@@ -19,6 +20,7 @@ $(function() {
     $('.img-container').fadeIn(500);
   });
 
+  /*__________Function for image slider_________ */
   function imageSlider() {
     interval = setInterval(function(){
       $('.hero-images').animate({'margin-left': '-=' + width}, 1000, function(){
@@ -61,28 +63,36 @@ $(function() {
 //   imageSlider();
 // });
 
-var handlebarsData = [
-  {
-    category: 'about',
-    title: 'About Me',
-    content: 'is my template working??? This is the about me section'
-  },
-  {
-    category: 'experience',
-    title: 'Experience',
-    content: 'This is the experience section'
-  },
-  {
-    category: 'projects',
-    title: 'Projects',
-    content: 'This is the projects section'
-  },
-  {
-    category: 'contact',
-    title: 'Contact Me',
-    content:'This is the contacts section'
+/*____Function to display handle bars data_______*/
+$(function() {
+  var handlebarsData = [
+    {
+      category: 'about',
+      title: 'About Me',
+      content: 'is my template working??? This is the about me section'
+    },
+    {
+      category: 'experience',
+      title: 'Experience',
+      content: 'This is the experience section'
+    },
+    {
+      category: 'projects',
+      title: 'Projects',
+      content: 'This is the projects section'
+    },
+    {
+      category: 'contact',
+      title: 'Contact Me',
+      content:'This is the contacts section'
+    }
+  ];
+  //TODO: add for loop or object
+  for (var i = 0; i < handlebarsData.length; i++){
+    var template = $('#template').html();
+    var compileData = Handlebars.compile(template);
+    $('#main').append(compileData(handlebarsData[i]));
   }
-];
-
-var template = $('#template').html();
-var compileData = Handlebars.compile(template);
+  return compileData(handlebarsData);
+  /*TODO: finish how to use handlebars for templating.*/
+});

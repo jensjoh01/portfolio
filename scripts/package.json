@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio for 301",
+  "main": "server.js",
+  "scripts": {
+    "test": "no tests",
+    "start": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jensjoh01/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "John Jensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jensjoh01/portfolio/issues"
+  },
+  "homepage": "https://github.com/jensjoh01/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
