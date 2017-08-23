@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="styles/modules.css">
     <title>John Jensen</title>
   </head>
+
   <body>
+    <script id="template" type="text/x-handlebars-template">
+      <main>
+        <section id="{{category}}">
+          <h1>{{title}}</h1>
+          <p>{{content}}</p>
+        </section>
+      </main>
+    </script>
+
 
     <header>
       <h1>John Jensen</h1>
@@ -34,8 +44,8 @@
       </ul>
     </div>
 
-    <main>
-      <section id="about">
+    <main id="main">
+      <!-- <section id="about">
         <h1>About Me</h1>
         <p>This is the about me section</p>
       </section>
@@ -53,10 +63,11 @@
       <section id="contact">
         <h1>Contact Me</h1>
         <p>This is the contacts section</p>
-      </section>
+      </section> -->
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../scripts/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
   </body>
 </html>
