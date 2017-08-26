@@ -37,7 +37,6 @@ $(function() {
 });
 
 /*______Function to toggle hamburger button______*/
-
 $(function() {
   $('#hamburger').on('click', function() {
     $('header nav').slideToggle();
@@ -87,7 +86,7 @@ $(function() {
       content:'This is the contacts section'
     }
   ];
-  //TODO: add for loop or object
+
   for (var i = 0; i < handlebarsData.length; i++){
     var template = $('#template').html();
     var compileData = Handlebars.compile(template);
