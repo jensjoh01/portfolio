@@ -20,6 +20,14 @@
       </main>
     </script>
 
+    <script id="project-template" type="text/x-handlebars-template">
+        <section id="{{id}}">
+          <h1>{{title}}</h1>
+          <h2>{{date}}</h2>
+          <p>{{about}}</p>
+          <img src={{img}} />
+        </section>
+    </script>
 
     <header>
       <h1>John Jensen</h1>
@@ -37,34 +45,21 @@
 
     <div class="img-container">
       <ul class="hero-images">
-        <li class="hero-image"><img id="image1" src="http://placehold.it/1020x550/FFA"></li>
-        <li class="hero-image"><img id="image2" src="http://placehold.it/1020x550/777"></li>
-        <li class="hero-image"><img id="image3" src="http://placehold.it/1020x550/800000"></li>
-        <li class="hero-image"><img id="image4" src="http://placehold.it/1020x550/FFA"></li>
+        <li class="hero-image"><img id="image1" src="img/cow.jpg"></li>
+        <li class="hero-image"><img id="image2" src="img/utah.jpg"></li>
+        <li class="hero-image"><img id="image3" src="img/landscape1.jpg"></li>
+        <li class="hero-image"><img id="image4" src="/img/cow.jpg"></li>
       </ul>
     </div>
 
     <main id="main">
-      <!-- <section id="about">
-        <h1>About Me</h1>
-        <p>This is the about me section</p>
-      </section>
-
-      <section id="experience">
-        <h1>Experience</h1>
-        <p>This is the experience section</p>
-      </section>
-
-      <section id="projects">
-        <h1>Projects</h1>
-        <p>This is the projects section</p>
-      </section>
-
-      <section id="contact">
-        <h1>Contact Me</h1>
-        <p>This is the contacts section</p>
-      </section> -->
     </main>
+    <footer>
+      <a href="mailto:johnnyj2439@gmail.com"><img src="img/email-2048-black.png" width="40" height="40" alt="email Icon"></a>
+      <a href="https://github.com/jensjoh01"><img src="img/github.png" width="40" height="40" alt="GitHub Icon"></a>
+      <a href="https://www.linkedin.com/in/john-r-jensen/"><img src="img/linkedin.png" width="40" height="40" alt="linkedin Icon"></a>
+      <p>&#9400; John Jensen 2017</p>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>

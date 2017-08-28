@@ -7,3 +7,80 @@ header {
   height: 60px;
   color: #bbb;
 }
+
+#about {
+  text-align: center;
+}
+
+#about h1 {
+  margin: 40px 0px;
+}
+
+#about img {
+  border-radius: 50%;
+}
+
+#about p {
+  width: 50%;
+  margin: 40px auto;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+#experience {
+  text-align: center;
+}
+
+#experience h1 {
+  margin: 20px 0;
+}
+
+#experience p {
+  margin: 20px 0;
+}
+
+#icons img {
+  margin: 20px;
+}
+
+#projects {
+  text-align: center;
+}
+
+#projects h1 {
+  margin: 20px 0px;
+}
+
+#projects p {
+  margin: 20px 0;
+}
+
+#algorithm-teacher img {
+  max-width: 400px;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact h1 {
+  margin: 20px 0;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+footer {
+  height: 180px;
+  background-color: #8b93a0;
+  text-align: center;
+}
+
+footer img{
+  margin: 30px 10px;
+}
+
+footer p {
+  margin-top: 40px;
+}
