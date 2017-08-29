@@ -1,11 +1,22 @@
 /* Modules CSS stylesheet navigation, headings, ul, smaller components*/
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header h1 {
   display: inline-block;
   height: 60px;
   line-height: 60px;
   margin-left: 20px;
   font-size: 1.5em;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #bbb;
 }
 
 header nav ul li {
@@ -38,6 +49,8 @@ header nav {
   display: none;
 }
 
+
+
 @media only screen and (min-width: 640px) {
 
   #hamburger {
@@ -63,6 +76,7 @@ header nav {
     height: 60px;
     line-height: 60px;
     background-color: #444;
+    border: none;
   }
 
   header nav ul {

@@ -1,5 +1,6 @@
 /*stylesheet for main elements html, body, article, nav, aside, p, a*/
 
+
 .img-container {
   max-width: 1020px;
   height: auto;
@@ -19,4 +20,8 @@
 h1 {
   font-weight: bold;
   font-size: 2em;
+}
+
+body {
+  padding-top: 50px;
 }
