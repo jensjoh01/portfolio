@@ -1,19 +1,6 @@
 'use strict';
+
 $(function() {
-
-  /*_______Function to hide and show tab content________*/
-
-  $('header nav ul li a').on('click', function() {
-    $('.img-container').hide();
-    $('main section').hide();
-    var $viewSection = $(this).data('tab');
-    $('#' + $viewSection).fadeIn(500);
-  });
-
-  $('header h1').on('click', function() {
-    $('main section').fadeIn(500);
-    $('.img-container').fadeIn(500);
-  });
 
   $('#hamburger').on('click', function() {
     $('header nav').slideToggle();
@@ -33,7 +20,7 @@ $(function() {
         }
       });
     },4000);
-  };
+  }
 
   /*_________Function for handlebars_______________*/
   function compileHandlebars() {

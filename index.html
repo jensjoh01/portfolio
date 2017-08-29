@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <title>John Jensen</title>
   </head>
 
@@ -30,14 +31,14 @@
     </script>
 
     <header>
-      <h1>John Jensen</h1>
+      <h1><a href='/'>John Jensen</a></h1>
         <span id="hamburger">&#9776;</span>
         <nav class="main-nav">
             <ul>
-              <li><a href='#' data-tab="about">About</a></li>
-              <li><a href='#' data-tab="experience">Experience</a></li>
-              <li><a href='#'data-tab="projects">Projects</a></li>
-              <li><a href='#' data-tab="contact">Contact</a></li>
+              <li><a href='/about' data-tab="about">About</a></li>
+              <li><a href='/experience' data-tab="experience">Experience</a></li>
+              <li><a href='/projects'data-tab="projects">Projects</a></li>
+              <li><a href='/contact' data-tab="contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -64,5 +65,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/projectView.js"></script>
+    <script type="text/javascript" src="./scripts/route.js"></script>
   </body>
 </html>
