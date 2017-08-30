@@ -65,26 +65,49 @@ $(function() {
     $('#experience p').after('</div>');
   }
 
-  function compileProjectHandlebars() {
-    function Project(data) {
-      this.title = data.title;
-      this.date = data.date;
-      this.about = data.about;
-      this.img = data.img;
-      Project.all.push(this);
-    }
-    Project.all = [];
-    $.getJSON('data/projects.json').then(function(data){
-      data.forEach(function(val){
-        new Project(val);
-        var projectTemplate = $('#project-template').html();
-        var compileData  = Handlebars.compile(projectTemplate);
-        $('#projects').append(compileData(val));
-      });
-    });
 
-    $('#algorithm-teacher img').append('<a href=https://jensjoh01.github.io/algorithm-teacher/');
+//TODO: I nedd to finish this function to append the number of commtis to the dom for each project, not
+// just on the first project. Also, I can probably get rid of the whole commitsUrl stuff and just use
+// an ajax call with `${data.commits_url.slice(0,-6)}` where my handlebars currently is.
+  function compileProjectHandlebars() {
+    const repos = {};
+    const commitsUrl = {};
+    const commits = {};
+    repos.all = [];
+    commitsUrl.all = [];
+    commits.all = [];
+    $.ajax({
+      url: 'https://api.github.com/user/repos',
+      method: 'GET',
+      headers: {Authorization: `token ${githubToken}`}
+    }).then(data => data.forEach(
+      function(data) {
+        repos.all.push(data);
+        commitsUrl.all.push(data.commits_url)
+      }),
+      err => console.error(err)).then(data => repos.all.forEach(
+        function(data) {
+          var repoTemplate = $('#repo-template').html();
+          var compileData  = Handlebars.compile(repoTemplate);
+          $('#projects').append(compileData(data));
+        })).then(data => commitsUrl.all.forEach(function(data){
+          $.ajax({
+            url: `${data.slice(0,-6)}`,
+            method: 'GET',
+            headers: {Authorization: `token ${githubToken}`}
+          }).then(function(data){
+            commits.all.push(data)
+            $('#num-commits').append(data.length)
+          })
+        }));
+
+
+
+
+        // console.log(repos.all)
+        // console.log(commits)
   }
+
 
   compileHandlebars();
   compileProjectHandlebars();
