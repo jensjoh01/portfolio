@@ -81,7 +81,7 @@ $(function() {
 
         commitData.forEach(function(data){
           messageLength += data.commit.message.match(/\b\w+/g).length;
-        })
+        });
         var avgLength = Math.round(messageLength/commitData.length);
 
         // Adds a key value pair for average commit length
@@ -91,9 +91,9 @@ $(function() {
         var compileData  = Handlebars.compile(repoTemplate);
         $('#projects').append(compileData(repoData));
         $('#num-commits').append(compileData(commitData.length));
-      })
+      });
     }),
-      err => console.error(err)).then()
+      err => console.error(err)).then();
   }
 
   compileHandlebars();
