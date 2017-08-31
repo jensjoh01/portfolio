@@ -69,47 +69,34 @@ $(function() {
 //TODO: I nedd to finish this function to append the number of commtis to the dom for each project, not
 // just on the first project. Also, I can probably get rid of the whole commitsUrl stuff and just use
 // an ajax call with `${data.commits_url.slice(0,-6)}` where my handlebars currently is.
-  function compileProjectHandlebars() {
-    const repos = {};
-    const commitsUrl = {};
-    const commits = {};
-    repos.all = [];
-    commitsUrl.all = [];
-    commits.all = [];
-    $.ajax({
-      url: 'https://api.github.com/user/repos',
-      method: 'GET',
-      headers: {Authorization: `token ${githubToken}`}
-    }).then(data => data.forEach(
-      function(data) {
-        repos.all.push(data);
-        commitsUrl.all.push(data.commits_url)
-      }),
-      err => console.error(err)).then(data => repos.all.forEach(
-        function(data) {
-          var repoTemplate = $('#repo-template').html();
-          var compileData  = Handlebars.compile(repoTemplate);
-          $('#projects').append(compileData(data));
-        })).then(data => commitsUrl.all.forEach(function(data){
-          $.ajax({
-            url: `${data.slice(0,-6)}`,
-            method: 'GET',
-            headers: {Authorization: `token ${githubToken}`}
-          }).then(function(data){
-            commits.all.push(data)
-            $('#num-commits').append(data.length)
-          })
-        }));
+  function getGitHubAPI() {
 
+    $.get('/github/user/repos').then(data => data.forEach(function(repoData) {
+      $.get(repoData.commits_url.slice(0,-6)).then(function(commitData) {
 
+        // This adds a new key value pair in my repo object for the length
+        repoData.number_of_commits = commitData.length;
 
+        var messageLength = 0;
 
-        // console.log(repos.all)
-        // console.log(commits)
+        commitData.forEach(function(data){
+          messageLength += data.commit.message.match(/\b\w+/g).length;
+        })
+        var avgLength = Math.round(messageLength/commitData.length);
+
+        // Adds a key value pair for average commit length
+        repoData.average_commit_length = avgLength;
+
+        var repoTemplate = $('#repo-template').html();
+        var compileData  = Handlebars.compile(repoTemplate);
+        $('#projects').append(compileData(repoData));
+        $('#num-commits').append(compileData(commitData.length));
+      })
+    }),
+      err => console.error(err)).then()
   }
 
-
   compileHandlebars();
-  compileProjectHandlebars();
+  getGitHubAPI();
   imageSlider();
 });
