@@ -76,36 +76,35 @@ $(function() {
     repos.all = [];
     commitsUrl.all = [];
     commits.all = [];
-    $.ajax({
-      url: 'https://api.github.com/user/repos',
-      method: 'GET',
-      headers: {Authorization: `token ${githubToken}`}
-    }).then(data => data.forEach(
-      function(data) {
+
+    $.get('/github/user/repos')
+    .then(data => data.forEach(function(data) {
         repos.all.push(data);
-        commitsUrl.all.push(data.commits_url)
       }),
-      err => console.error(err)).then(data => repos.all.forEach(
-        function(data) {
-          var repoTemplate = $('#repo-template').html();
-          var compileData  = Handlebars.compile(repoTemplate);
-          $('#projects').append(compileData(data));
-        })).then(data => commitsUrl.all.forEach(function(data){
-          $.ajax({
-            url: `${data.slice(0,-6)}`,
-            method: 'GET',
-            headers: {Authorization: `token ${githubToken}`}
-          }).then(function(data){
-            commits.all.push(data)
-            $('#num-commits').append(data.length)
-          })
-        }));
+      err => console.error(err)).then(function(){
+        repos.all.forEach(function(data){
+          $.get(data.commits_url.slice(0,-6)).then(data => commits.all.push(data))
+        })
+      })
+      // .then(data => repos.all.forEach(function(data) {
+      //
+      //   var repoTemplate = $('#repo-template').html();
+      //   var compileData  = Handlebars.compile(repoTemplate);
+      //   $('#projects').append(compileData(data));
+      //
+      // })).then(data => commitsUrl.all.forEach(function(data){
+      //   console.log(data)
+      //   $.get(`/github/${data.slice(0,-6)}`)
+      //   .then(function(data){
+      //
+      //     commits.all.push(data)
+      //     $('#num-commits').append(data.length)
+      //
+      //     })
+      //   }));
 
-
-
-
-        // console.log(repos.all)
-        // console.log(commits)
+        console.log(repos.all)
+        console.log(commits.all)
   }
 
 
