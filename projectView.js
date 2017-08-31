@@ -33,10 +33,6 @@ var app = app || {};
     $('main section').fadeIn(500);
     $('.img-container').fadeIn(500);
   }
-
-  contactController.init = function() {
-    $('.img-container').hide();
-    $('main section').hide();
   }
 
   module.projectsController = projectsController;
