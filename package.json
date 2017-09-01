@@ -2,10 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio for 301",
-  "main": "server.js",
+  "main": "./server.js",
   "scripts": {
     "test": "no tests",
-    "start": "server.js"
+    "start": "./server.js"
   },
   "repository": {
     "type": "git",
