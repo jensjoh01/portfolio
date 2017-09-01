@@ -66,9 +66,6 @@ $(function() {
   }
 
 
-//TODO: I nedd to finish this function to append the number of commtis to the dom for each project, not
-// just on the first project. Also, I can probably get rid of the whole commitsUrl stuff and just use
-// an ajax call with `${data.commits_url.slice(0,-6)}` where my handlebars currently is.
   function getGitHubAPI() {
 
     $.get('/github/user/repos').then(data => data.forEach(function(repoData) {
