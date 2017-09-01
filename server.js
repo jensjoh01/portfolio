@@ -7,6 +7,7 @@ const app = express();
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 
+// must direct to index.html
 app.use(express.static('./'));
 
 app.listen(PORT, function() {
