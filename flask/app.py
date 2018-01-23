@@ -1,21 +1,11 @@
 """."""
 from flask import Flask
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
+app.static_folder = 'static'
 
 
 @app.route('/')
 def home_view():
     """."""
-    return 'Home!'
+    return app.send_static_file('./index.html')
 
-
-@app.route('/projects/')
-def projects_view():
-    """."""
-    return 'projects are here'
-
-
-@app.route('/about')
-def about_view():
-    """."""
-    return 'this is the about me view'
