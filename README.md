@@ -1,2 +1,4 @@
-# portfolio
-Portfolio to demonstrate my skills, experience, and interests
+# Portfolio
+Portfolio to demonstrate my skills, experience, projecnts, and interests.
+
+Built with Flask.
