@@ -1,0 +1,88 @@
+/*Nav*/
+
+#name {
+    margin-left: 8em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#name a {
+    text-decoration: none;
+    font-size: 2.4em;
+    color: #18436b;
+}
+
+#hamburger {
+  display: inline-block;
+  float: right;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  margin-top: .8em;
+}
+
+header nav ul li{
+    display: none;
+}
+
+#about {
+    margin-top: 5em;
+}
+
+
+
+@media only screen and (min-width: 840px) {
+
+  #hamburger {
+    display: none;
+  }
+
+.nav-container {
+    /*margin-top: 2em;*/
+    /*height: 5em;*/
+    /*display: inline-block;*/
+    /*width: 100%;*/
+}
+
+#name {
+    margin-left: 8em;
+    margin-top: 2em;
+    display: inline-block;
+    text-align: center;
+}
+
+#name a {
+    text-decoration: none;
+    font-size: 2.4em;
+    color: #18436b;
+}
+
+.main-nav {
+    height: 8em;
+}
+
+.main-nav ul {
+    width: 30em;
+    text-align: center;
+    float: right;
+    margin-top: 2.5em;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin: 0 1.5em 0 0;
+    font-size: 1.4em;
+    /*margin-bottom: 130px;*/
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #18436b;
+}
+
+#about {
+    margin-top: 0;
+}
+}
