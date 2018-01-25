@@ -2,57 +2,16 @@
     outline: dashed orange 1px;
 }
 
-.nav-container {
-    /*margin-top: 2em;*/
-    /*height: 5em;*/
-    /*display: inline-block;*/
-    /*width: 100%;*/
-}
-
-h1 {
-    /*width: 200px;*/
-    margin-left: 8em;
-    margin-top: 2em;
-    position: fixed;
-    /*text-align: center;*/
-}
-
-#name a {
-    text-decoration: none;
-    font-size: 2.4em;
-    color: #18436b;
-}
-
-.main-nav {
-    height: 8em;
-    /*background: #18436b;*/
-}
-
-.main-nav ul {
-    width: 30em;
-    text-align: center;
-    float: right;
-    margin-top: 2.5em;
-}
-
-.main-nav ul li {
-    display: inline;
-    margin: 0 1.5em 0 0;
-    font-size: 1.4em;
-    /*margin-bottom: 130px;*/
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #18436b;
-}
-
-
 body {
     border: 8px solid #18436b;
 }
 
-
+h2 {
+    font-size: 2em;
+    color: #18436b;
+    margin: auto 0;
+    text-align: center;
+}
 
 
 
